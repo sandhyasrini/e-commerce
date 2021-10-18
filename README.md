@@ -2,7 +2,6 @@
 
 This is an e-commerce app built using React, Redux, Javascript and LESS
 
-
 ## PROJECT STATUS
 
 This is currently under development. This app let's you to login/signup, search for products, add them to cart, checkout, add products to wishlist and sort by price
@@ -22,7 +21,7 @@ To Run Test Suite:
 
 To Start Server:
 
-`npm start`  
+`npm run dev`  
 
 To Visit App:
 
