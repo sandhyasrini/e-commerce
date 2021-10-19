@@ -3,7 +3,7 @@ import  ReactDOM, {render} from "react-dom";
 
 const App = () => {
     return(
-      <h1> from js file</h1>
+      <h1> from jsx file</h1>
     )
   }
   
