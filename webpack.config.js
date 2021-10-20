@@ -18,6 +18,18 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.?less?$/,
+        use: {
+          loader: "less-loader"
+        },
+        use: {
+          loader: "style-loader"
+        },
+        use: {
+          loader: "css-loader"
+        }
+      },
     ]
   },
   plugins: [
