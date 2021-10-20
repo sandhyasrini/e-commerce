@@ -1,10 +1,13 @@
 import React from "react";
 import  ReactDOM, {render} from "react-dom";
-import './login.less'
+import '../../assets/styles/login.less'
 
 export default function Login() {
+    const login = {
+        color: "blue"
+        }
     return(
-        <div>
+        <div className="login">
             E-commerce
             <div className="login">
             username/e-mail
