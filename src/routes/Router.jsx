@@ -1,6 +1,5 @@
 import React from "react";
 import  ReactDOM, {render} from "react-dom";
-import Landing from '../components/Landing/Landing.jsx'
 import Login from '../components/Login/Login.jsx'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
