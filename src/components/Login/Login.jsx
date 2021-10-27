@@ -5,25 +5,31 @@ import { loginPage } from "../../constants/app.constants";
 import '../../assets/styles/login.less'
 
 export default function Login() {
-    console.warn(loginPage);
-    const login = {
-        color: "blue"
-        }
     return(
-<Container className="justify-content-md-center login">
-        <Row>
+<Container className="justify-content-md-center login" fluid="md">
+        <Row className="justify-content-center">
                 <Col>{loginPage.heading}</Col>
-                <Col>
-                {loginPage.userNamePrompt}
-                <input type="text"/>
-                </Col>
-                <Col>
-                {loginPage.userPasswordPrompt}
-                <input type="password"/></Col>
-                <Col>
-                <button>{loginPage.login}</button>
-                <button>{loginPage.signup}</button></Col>
-        </Row>
+                </Row>
+                <Row md={5}>
+                <Col md={2} className="text-md-right">
+                {loginPage.userNamePrompt}</Col>
+                <Col md={3} className="text-md-left">
+                <input type="text"/></Col>
+                
+                </Row>
+                <Row>
+                <Col md={2} className="text-md-right">
+                {loginPage.userPasswordPrompt} </Col>
+                <Col md={3} className="text-md-left">
+                <input type="password"/></Col></Row>
+                <Row>
+                <Col md={1} className="text-md-left">
+                <button>{loginPage.login}</button></Col>
+                </Row>
+                <Row>
+                    <button className="button-link">New here? Click to sign up!</button>
+                </Row>
+        
 </Container>
     ); 
 }
