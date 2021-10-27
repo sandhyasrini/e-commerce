@@ -1,6 +1,6 @@
 import React from "react";
 import  ReactDOM, {render} from "react-dom";
-import Login from '../components/Login/Login.jsx'
+import Login from '../components/views/Login/Login.jsx'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 

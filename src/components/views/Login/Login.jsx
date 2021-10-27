@@ -1,9 +1,9 @@
 import React from "react";
 import  ReactDOM, {render} from "react-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { loginPage } from "../../constants/app.constants";
-import '../../assets/styles/login.less'
-import Header from "./Header.jsx";
+import { loginPage } from "../../../constants/app.constants";
+import '../../../assets/styles/login.less'
+import Header from "../../blocks/Header/Header.jsx";
 
 export default function Login() {
     return(
