@@ -1,5 +1,6 @@
 import React from "react";
 import  ReactDOM, {render} from "react-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import '../../assets/styles/login.less'
 
 export default function Login() {
@@ -7,21 +8,20 @@ export default function Login() {
         color: "blue"
         }
     return(
-<div>
-    <div>
-            E-commerce
-            <div className="login">
-                <div>
-            username/e-mail
-            <input type="text"/></div>
-            <div>
-            password
-            <input type="password"/></div>
-            <div>
-            <button>Login</button>
-            <button>Signup</button></div>
-            </div>
-            </div>
-</div>
+<Container className="justify-content-md-center login">
+        <Row>
+                <Col>E-commerce</Col>
+                <Col>
+                username/e-mail
+                <input type="text"/>
+                </Col>
+                <Col>
+                password
+                <input type="password"/></Col>
+                <Col>
+                <button>Login</button>
+                <button>Signup</button></Col>
+        </Row>
+</Container>
     ); 
 }
