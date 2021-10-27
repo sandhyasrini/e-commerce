@@ -3,13 +3,12 @@ import  ReactDOM, {render} from "react-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { loginPage } from "../../constants/app.constants";
 import '../../assets/styles/login.less'
+import Header from "./Header.jsx";
 
 export default function Login() {
     return(
 <Container className="justify-content-md-center login" fluid="md">
-        <Row className="justify-content-center">
-                <Col>{loginPage.heading}</Col>
-                </Row>
+    <Header />
                 <Row md={5}>
                 <Col md={2} className="text-md-right">
                 {loginPage.userNamePrompt}</Col>

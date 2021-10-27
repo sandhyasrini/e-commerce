@@ -1,5 +1,5 @@
 const loginPage = {
-    heading: "E-commerce",
+    heading: "Furnitr",
     userNamePrompt: "Username/e-mail",
     userPasswordPrompt: "Password",
     login: "Login",
