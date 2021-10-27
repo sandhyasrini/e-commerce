@@ -1,26 +1,28 @@
 import React from "react";
 import  ReactDOM, {render} from "react-dom";
 import { Container, Row, Col } from "react-bootstrap";
+import { loginPage } from "../../constants/app.constants";
 import '../../assets/styles/login.less'
 
 export default function Login() {
+    console.warn(loginPage);
     const login = {
         color: "blue"
         }
     return(
 <Container className="justify-content-md-center login">
         <Row>
-                <Col>E-commerce</Col>
+                <Col>{loginPage.heading}</Col>
                 <Col>
-                username/e-mail
+                {loginPage.userNamePrompt}
                 <input type="text"/>
                 </Col>
                 <Col>
-                password
+                {loginPage.userPasswordPrompt}
                 <input type="password"/></Col>
                 <Col>
-                <button>Login</button>
-                <button>Signup</button></Col>
+                <button>{loginPage.login}</button>
+                <button>{loginPage.signup}</button></Col>
         </Row>
 </Container>
     ); 
