@@ -4,31 +4,18 @@ import { Container, Row, Col } from "react-bootstrap";
 import { loginPage } from "../../../constants/app.constants";
 import '../../../assets/styles/login.less'
 import Header from "../../blocks/Header/Header.jsx";
+import Button from "../../blocks/Button/Button.jsx";
+import Link from "../../blocks/Link/Link.jsx";
+import Input from "../../blocks/Input/Input.jsx";
 
 export default function Login() {
     return(
 <Container className="justify-content-md-center login" fluid="md">
-    <Header />
-                <Row md={5}>
-                <Col md={2} className="text-md-right">
-                {loginPage.userNamePrompt}</Col>
-                <Col md={3} className="text-md-left">
-                <input type="text"/></Col>
-                
-                </Row>
-                <Row>
-                <Col md={2} className="text-md-right">
-                {loginPage.userPasswordPrompt} </Col>
-                <Col md={3} className="text-md-left">
-                <input type="password"/></Col></Row>
-                <Row>
-                <Col md={1} className="text-md-left">
-                <button>{loginPage.login}</button></Col>
-                </Row>
-                <Row>
-                    <button className="button-link">New here? Click to sign up!</button>
-                </Row>
-        
+    <Header heading={loginPage.heading}/>
+    <Input fieldName={loginPage.userNamePrompt} type="text" />
+    <Input fieldName={loginPage.userPasswordPrompt} type="password" />
+    <Button text={loginPage.login} />
+    <Link text={loginPage.signup} />     
 </Container>
     ); 
 }

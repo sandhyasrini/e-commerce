@@ -1,12 +1,9 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { loginPage } from "../../../constants/app.constants";
+import { Row, Col } from "react-bootstrap";
 import '../../../assets/styles/login.less'
 
-export default function Header() {
+export default function Header({...props}) {
     return(
-<Container>
         <Row className="justify-content-center">
-        <Col>{loginPage.heading}</Col>
+        <Col>{props.heading}</Col>
         </Row>
-        </Container>
-        )}
+    )}
