@@ -1,13 +1,13 @@
+import React from "react";
+import  ReactDOM, {render} from "react-dom";
 import { Row, Col } from "react-bootstrap";
 import '../../../assets/styles/login.less'
 
 
 export default function Input({...props}) {
     return(
-        <Row md={5}>
-            <Col md={2} className="text-md-right">
-                {props.fieldName}</Col>
-            <Col md={3} className="text-md-left">
+        <Row className="justify-content-center form-style">
+            <Col md={6} className="text-md-left">
                 <input type={props.type}/></Col> 
         </Row>
     )}
