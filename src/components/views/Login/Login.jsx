@@ -12,7 +12,6 @@ import ContainerBox from "../../blocks/Container/Container.jsx";
 export default function Login() {
     return(
 <Container className="login" fluid="md">
-
     <Row md="1">
     <Col md="12" className="justify-content-md-center">
     <Header heading={loginPage.heading}/>
