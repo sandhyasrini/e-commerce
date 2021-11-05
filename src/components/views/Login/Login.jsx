@@ -11,16 +11,18 @@ import ContainerBox from "../../blocks/Container/Container.jsx";
 
 export default function Login() {
     return(
-<Container className="login" fluid="md">
-    <Row md="1">
-    <Col md="12" className="justify-content-md-center">
+<div className="outer">
     <Header heading={loginPage.heading}/>
-    <Input fieldName={loginPage.userNamePrompt} type="text" />
-    <Input fieldName={loginPage.userPasswordPrompt} type="password" />
-    <Button text={loginPage.login} />
-    <Link text={loginPage.signup} />   
-    </Col> 
-    </Row> 
-</Container>
+    <Container className="login" fluid="md">
+        <Row md="1">
+        <Col md="12" className="justify-content-md-center">
+        <Input fieldName={loginPage.userNamePrompt} type="text" />
+        <Input fieldName={loginPage.userPasswordPrompt} type="password" />
+        <Button text={loginPage.login} />
+        <Link text={loginPage.signup} />   
+        </Col> 
+        </Row> 
+    </Container>
+</div>
     ); 
 }

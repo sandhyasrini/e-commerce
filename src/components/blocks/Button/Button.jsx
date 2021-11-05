@@ -6,8 +6,8 @@ import '../../../assets/styles/login.less'
 
 export default function Button({...props}) {
     return(
-        <Row className="justify-content-center">
-        <Col md={6} className="text-md-left">
-        <button className="button-style">{props.text}</button></Col>
+        <Row className="justify-content-center button-style">
+        <Col md={12} className="text-md-left">
+        <button>{props.text}</button></Col>
         </Row>
     )}
