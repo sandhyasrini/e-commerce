@@ -1,13 +1,21 @@
 import React from "react";
-import  ReactDOM, {render} from "react-dom";
-import { Row, Col } from "react-bootstrap";
+import ReactDOM, { render } from "react-dom";
+import { Row, Col, FloatingLabel, Form } from "react-bootstrap";
 import '../../../assets/styles/login.less'
 
 
-export default function Input({...props}) {
-    return(
+export default function Input({ ...props }) {
+    return (
         <Row className="justify-content-center form-style">
             <Col md={12} className="text-md-left">
-                <input type={props.type}/></Col> 
+                <FloatingLabel
+                    controlId="floatingInput"
+                    label={props.fieldName}
+                    className="mb-3"
+                >
+                    <Form.Control type={props.type} placeholder="name@example.com" />
+                </FloatingLabel>
+            </Col>
         </Row>
-    )}
+    )
+}
