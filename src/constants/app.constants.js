@@ -1,6 +1,6 @@
 const loginPage = {
     heading: "Furnitr",
-    userNamePrompt: "Username/e-mail",
+    userNamePrompt: "Username",
     userPasswordPrompt: "Password",
     login: "Login",
     signup: "New here? Click to sign up!",
