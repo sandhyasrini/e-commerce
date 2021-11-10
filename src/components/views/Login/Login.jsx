@@ -8,13 +8,14 @@ import Button from "../../blocks/Button/Button.jsx";
 import Link from "../../blocks/Link/Link.jsx";
 import Input from "../../blocks/Input/Input.jsx";
 import { onClick, onChange } from './index';
+import { useDispatch } from "react-redux";
+import { loginAction } from "../../../store/slices"
 
 export default function Login() {
+    const dispatch = useDispatch();
     const [state, setState] = useState({ "Username": "", "Password": "" });
 
-    function onClick(e) {
-        console.log(e);
-    }
+    function onClick() { dispatch(loginAction(state)) }
 
     function onChange(e) {
         const { name, value } = e.target

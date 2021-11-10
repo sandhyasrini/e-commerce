@@ -10,11 +10,11 @@ const userSlice = createSlice({
     name: "users",
     initialState: userState,
     reducers: {
-        getUserName: {
-
-        }
+        getUserDetails: (state, action) => {
+            console.log(action.payload);
+        },
     }
 })
 
-export const loginAction =  userSlice.actions
-export const loginReducer = userSlice.reducer
+export const { loginAction} =  userSlice.actions
+export const { loginReducer } = userSlice.reducer
