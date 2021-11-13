@@ -10,15 +10,15 @@ import Input from "../../blocks/Input/Input.jsx";
 import { onClick, onChange } from './index';
 import { useDispatch } from "react-redux";
 import { getUserDetails } from "../../../store/slices"
-import  userSlice  from "../../../store/slices"
 
-export default function Login() {
+export default function Login(props) {
     const dispatch = useDispatch();
     const [state, setState] = useState({ "Username": "", "Password": "" });
 
     function onClick() { 
-        console.log(userSlice)
         dispatch(getUserDetails(state)) 
+        if(state.Username !== "" && state.Password !== "")
+        props.history.push('/landing')
     }
 
     function onChange(e) {
@@ -27,7 +27,7 @@ export default function Login() {
     }
 
     return (
-        <div className="outer">ƒƒ
+        <div className="outer">
             <Header heading={loginPage.heading} />
             <Container className="login" fluid="md">
                 <Row md="1">
