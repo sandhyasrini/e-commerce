@@ -13,7 +13,7 @@ export default function Input({ ...props }) {
                     label={props.fieldName}
                     className="mb-3"
                 >
-                    <Form.Control type={props.type} name={props.fieldName} placeholder="name@example.com" value={props.value} onChange={props.onChange} />
+                    <Form.Control type={props.type} name={props.fieldName} placeholder="name@example.com" value={props.value} onChange={props.onChange} onKeyPress={props.onKeyPress} required/>
                 </FloatingLabel>
             </Col>
         </Row>

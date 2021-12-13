@@ -17,5 +17,5 @@ const userSlice = createSlice({
     }
 })
 
-export const { getUserDetails} =  userSlice.actions
+export const { getUserDetails } =  userSlice.actions
 export default userSlice

@@ -7,6 +7,10 @@ const loginPage = {
 
 };
 
+const landingPage = {
+    heading: "Furnitr"
+}
 
 
-export { loginPage }
+
+export { loginPage, landingPage }
