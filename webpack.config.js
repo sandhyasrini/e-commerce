@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var WatchLiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path:path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "build"),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -13,6 +14,16 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       linkType: "text/css",
+    }),
+    new WatchLiveReloadPlugin({
+      files: [
+        './src/**/*.html',
+        './src/**/*.css',
+        './src/**/*.png',
+        './src/**/*.jpg',
+        './src/**/*.js',
+        './src/**/*.jsx',
+      ]
     })
   ],
   module: {
@@ -29,28 +40,29 @@ module.exports = {
       },
       {
         test: /\.(less|css)/,
-        exclude: /node_modules/ ,
+        exclude: /node_modules/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-        },
+          },
           "css-loader",
           "less-loader"
-        ]  
-    },
-    {
-      test: /\.(png|jpe?g|gif)$/i,
-      use: [
-        {
-          loader: 'url-loader'
-        },
-      ],
-    },
-    { 
-      test: /\.(png|jpg)$/,
-      include: path.join(__dirname, 'assets/images'),
-      loader: 'file-loader' 
-   }
-  ]}
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader'
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg)$/,
+        include: path.join(__dirname, 'assets/images'),
+        loader: 'file-loader'
+      }
+    ]
+  }
 
 }

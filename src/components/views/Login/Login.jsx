@@ -10,7 +10,7 @@ import Input from "../../blocks/Input/Input.jsx";
 import { onClick, onChange } from './index';
 import { useDispatch } from "react-redux";
 import { getUserDetails } from "../../../store/slices"
-import imageToRender from '../../../assets/images/pastel.jpeg';
+import imageToRender from '../../../assets/images/bw.png';
 
 
 export default function Login(props) {
@@ -35,7 +35,7 @@ export default function Login(props) {
     }
 
     return (
-        <div className="outer" style={{background: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url(" + imageToRender + ")"}}>
+        <div className="outer" style={{background: "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(" + imageToRender + ")"}}>
             <Header heading={loginPage.heading} />
             <Container className="login" fluid="md">
                 <Row md="1">
